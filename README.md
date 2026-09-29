@@ -1,4 +1,4 @@
-1. Open Linux Terminal
+**1. Open Linux Terminal**
 
 If you are using Ubuntu:
 
@@ -14,7 +14,7 @@ lsb_release -a
 
 You should see your Linux/Ubuntu version.
 
-2. Install required tools
+**2. Install required tools**
 
 Run:
 
@@ -40,7 +40,8 @@ You should get something like:
 
 go version go1.xx.x linux/amd64
 git version 2.xx.x
-3. Create your project
+
+**3. Create your project**
 
 Create a folder:
 
@@ -54,7 +55,8 @@ pwd
 Then initialize Go:
 
 go mod init fault-tolerant-kv
-4. Create the basic project structure
+
+**4. Create the basic project structure**
 
 Run:
 
@@ -70,22 +72,32 @@ Your project will look like:
 fault-tolerant-kv/
 │
 ├── cmd/
+
 │   └── server/
+
 │
 ├── internal/
+
 │   ├── kv/
+
 │   ├── raft/
+
 │   └── storage/
+
 │
 ├── benchmarks/
+
 ├── scripts/
+
 ├── docs/
+
 ├── README.md
+
 └── go.mod
 
 Don't worry if this looks big. We'll fill these folders one by one.
 
-5. First make a VERY simple KV store
+**5. First make a VERY simple KV store**
 
 Before implementing distributed systems, first understand the basic key-value operation.
 
@@ -117,14 +129,14 @@ Run:
 
 go run cmd/server/main.go
 
-Output:
+**Output:**
 
 Name: Sharmi
 Course: MTech CSE
 
 🎯 This is your first working component.
 
-6. Now do the Linux profiling baseline
+**6. Now do the Linux profiling baseline**
 
 This is specifically mentioned in your milestone:
 
